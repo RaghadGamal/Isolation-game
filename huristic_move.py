@@ -5,7 +5,7 @@ def heuristic_move(board, posA, posB, turn):
     moves = get_moves(current_pos, board, other_pos)  # بجيب كل الحركات اللي ممكن تتعمل من المكان الحالي
     if not moves:  # لو مفيش أي حركة متاحة
         return None  # يبقى خلاص مفيش حركة
-
+        
     best_move = None  # هنا هخزن أحسن حركة لقيتها
     best_score = -9999  # ببدأ بسكور قليل جدًا عشان أي حاجة تبقى أحسن منه
 
@@ -37,3 +37,4 @@ def heuristic_move(board, posA, posB, turn):
             best_move = move  # وأخزن الحركة دي كأحسن حركة
 
     return best_move  # في الآخر أرجع الحركة اللي طلعت أحسن واحدة
+
