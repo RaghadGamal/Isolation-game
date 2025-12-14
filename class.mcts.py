@@ -22,7 +22,6 @@ class MCTSNode:
         ]
         return self.children[choices_weights.index(max(choices_weights))]  
         # باختار الchild اللي عنده أعلى قيمة UCT
-
     def expand(self):
         board, posA, posB, turn = self.state  # بفك الحالة الحالية
         current_pos = posA if turn == "A" else posB  # مكان اللاعب اللي دوره
@@ -43,3 +42,4 @@ class MCTSNode:
                 self.children.append(child)  # أضيفه كchild للنود الحالي
                 return child  # أرجع الchild الجديد اللي اتعمل
         return None  # لو مفيش حركات جديدة يبقى مفيش توسع
+
